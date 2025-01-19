@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CCTV Streaming Dashboard
+
+This project is a CCTV streaming dashboard built with Next.js, React, and FFmpeg. It allows users to view live streams from multiple cameras, with features like mute/unmute, picture-in-picture, and fullscreen mode.
+
+## Features
+
+- **Live Streaming**: View live video streams from multiple cameras.
+- **Mute/Unmute**: Control audio for each camera stream.
+- **Picture-in-Picture**: Watch streams in a floating window.
+- **Fullscreen Mode**: Expand streams to fullscreen.
+- **Responsive Design**: Optimized for various screen sizes.
+
+## Technologies Used
+
+- **Next.js**: Framework for server-rendered React applications.
+- **React**: JavaScript library for building user interfaces.
+- **FFmpeg**: Tool for handling multimedia data.
+- **HLS.js**: JavaScript library for playing HLS streams in browsers.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js and npm installed on your machine.
+- FFmpeg installed and accessible in your system's PATH.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/cctv-dashboard.git
+   cd cctv-dashboard
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. **Set up environment variables**:
+   Create a `.env.local` file in the root directory and add the following variables:
+   ```plaintext
+   CAMS_USERNAME=your_camera_username
+   CAMS_PASSWORD=your_camera_password
+   CAMERAS_IP=192.168.0.10,192.168.0.11,192.168.0.12
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+### Running the Application
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Development Mode**:
+  ```bash
+  npm run dev
+  ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Production Build**:
+  ```bash
+  npm run build
+  npm start
+  ```
 
-## Deploy on Vercel
+## Usage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Access the application at `http://localhost:3000`.
+- Use the dashboard to view and control live streams from your cameras.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Troubleshooting
+
+- Ensure FFmpeg is correctly installed and accessible.
+- Check network connectivity to the cameras.
+- Verify that the environment variables are correctly set.
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [FFmpeg](https://ffmpeg.org/)
+- [HLS.js](https://github.com/video-dev/hls.js/)
+- [Tailwind CSS](https://tailwindcss.com/)
+# Home-CCTV-NVR
